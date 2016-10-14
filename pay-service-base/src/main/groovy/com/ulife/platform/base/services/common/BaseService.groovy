@@ -1,4 +1,4 @@
-package com.ulife.platform.base.services
+package com.ulife.platform.base.services.common
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page

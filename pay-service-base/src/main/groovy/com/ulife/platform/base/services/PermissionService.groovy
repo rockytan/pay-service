@@ -2,13 +2,14 @@ package com.ulife.platform.base.services
 
 import com.ulife.platform.base.entities.Permission
 import com.ulife.platform.base.repositories.PermissionRepository
+import com.ulife.platform.base.services.common.BaseService
 import org.springframework.stereotype.Component
 
 /**
  * Created by Rocky on 9/13/16.
  */
 @Component
-class PermissionService extends BaseService<PermissionRepository,Permission,String>{
+class PermissionService extends BaseService<PermissionRepository,Permission,String> {
 
     public List<Permission> getMenus(){
         repository.findByTypeAndStatusAndDepthAndIsDelete(Permission.MENU,Permission.NORMAL,Permission.ROOT,Permission.EXIST)

@@ -1,10 +1,11 @@
-package com.ulife.platform.base.entities
+package com.ulife.platform.base.entities.common
 
 import javax.persistence.Column
 import javax.persistence.PrePersist
 import javax.persistence.PreUpdate
 import javax.persistence.Version
 import javax.persistence.MappedSuperclass
+import javax.validation.constraints.NotNull
 import java.time.LocalDateTime
 
 /**
@@ -21,9 +22,11 @@ abstract class DataEntity extends BaseEntity{
 
     String creator
     @Column(columnDefinition = "timestamp")
+    @NotNull
     LocalDateTime createdTime
     String modifier
     @Column(columnDefinition = "timestamp")
+    @NotNull
     LocalDateTime modifiedTime
     int status = NORMAL
     @Column(columnDefinition = "tinyint")

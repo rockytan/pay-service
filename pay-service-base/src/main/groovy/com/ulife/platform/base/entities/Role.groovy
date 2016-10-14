@@ -1,5 +1,7 @@
 package com.ulife.platform.base.entities
 
+import com.ulife.platform.base.entities.common.DataEntity
+
 import javax.persistence.Entity
 import javax.persistence.JoinColumn
 import javax.persistence.JoinTable

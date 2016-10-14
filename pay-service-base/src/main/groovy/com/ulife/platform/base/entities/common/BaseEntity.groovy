@@ -1,4 +1,4 @@
-package com.ulife.platform.base.entities
+package com.ulife.platform.base.entities.common
 
 import com.ulife.platform.utils.ID
 
