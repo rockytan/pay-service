@@ -1,0 +1,33 @@
+server:
+  port: 9091
+
+spring:
+  profiles: development
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/ace_admin?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+
+shiro:
+  realm: com.ulife.platform.portal.security.SecurityRealm
+  loginUrl:  /login.html
+  successUrl: /index.html
+  unauthorizedUrl: /403.html
+  filterChainDefinitions:
+    #"/login.auth": authc
+    "/login.auth": anon
+    "/logout": logout
+    "/static/**": anon
+    "/webjars/**": anon
+    "/favicon.ico": anon
+    "/**": authc
+
+
